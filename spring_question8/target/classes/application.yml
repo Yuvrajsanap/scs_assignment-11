@@ -1,0 +1,11 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  app:
+    name: Actuator Demo
+    description: Spring Boot Actuator Example with Jakarta
+    version: 1.0.0

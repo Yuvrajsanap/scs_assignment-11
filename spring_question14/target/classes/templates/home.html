@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Internationalization Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 th:text="#{welcome}">Welcome</h1>
+        <p th:text="#{description}">This is an example of internationalization in Spring Boot.</p>
+
+        <div class="mt-3">
+            <!-- Links to switch languages -->
+            <a href="#" th:href="@{/home?lang=en}" class="btn btn-primary">English</a>
+            <a href="#" th:href="@{/home?lang=es}" class="btn btn-primary">Español</a>
+        </div>
+    </div>
+</body>
+</html>
