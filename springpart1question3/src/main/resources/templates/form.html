@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit User</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1 th:text="${user.id != null ? 'Edit User' : 'Add New User'}"></h1>
+    <form th:action="@{/users/save}" th:object="${user}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" required />
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" required />
+        <button type="submit">Save</button>
+    </form>
+    <a href="/users">Back to List</a>
+</body>
+</html>
